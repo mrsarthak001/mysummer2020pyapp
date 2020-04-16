@@ -1,0 +1,10 @@
+FROM python
+# it will check for python in docker engine, if not present then will pull from DockerHUB
+MAINTAINER mrsarthak001@gmail.com, 9675070702
+# Developer of Docker Image, optional
+RUN mkdir /mycode
+# Run instruction can execute any linux command inside my docker image that i am going to create
+COPY sarthak.py /mycode/sarthak.py
+# it will copy code from local system to Docker Image
+CMD python /mycode/sarthak.py
+# it will run this code as default parent process
